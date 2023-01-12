@@ -19,7 +19,6 @@ public class Memory {
 
   public void clearAllLists() {
     allCyllinders.clear();
-    allCommands.clear();
     requestedCyllinderVisits.clear();
   }
 
