@@ -47,62 +47,31 @@ public class RegistryReader implements IntegerChecker {
       }
     }
   }
-}
 
-  /*
-  public void saveFinalFile(Memory memory, char fitType) throws IOException {
+
+
+  public void saveFinalFile(int cylinderMovements, String sb, char fitType) throws IOException {
     try (PrintWriter pw = new PrintWriter(new FileWriter(getOutputPath().toString(), true))) {
-      printAndFormat(pw, memory, fitType);
+      printAndFormat(pw, fitType, cylinderMovements, sb);
     }
   }
 
-  private void printAndFormat(PrintWriter printWriter, char allocationType) {
+  private void printAndFormat(PrintWriter printWriter, char allocationType, int cylinderMovements, String sb) {
     if (allocationType == AllocationType.FCFS.getValue()) {
-      printWriter.printf("FCFS:%n");
+      printWriter.printf("FCFS%n");
     }
     if (allocationType == AllocationType.SCAN.getValue()) {
-      printWriter.printf("SCAN:%n");
+      printWriter.printf("SCAN%n");
     }
     if (allocationType == AllocationType.CSCAN.getValue()) {
-      printWriter.printf("C-SCAN:%n");
+      printWriter.printf("C-SCAN%n");
     }
-    printWriter.printf("Allocated blocks:");
-    for (Block b : blocks) {
-      if (b.isAllocated()) {
-        printWriter.printf("%n%s;%s;%s",
-            b.getBlockId(),
-            b.getAllocatedBytes().get(0),
-            b.getAllocatedBytes().get(b.getAllocatedBytes().size()-1));
-      }
-    }
-    printWriter.printf("%nFree blocks:");
-    for (Block fb : blocks) {
-      if (!fb.isAllocated()) {
-        if (!fb.getAllocatedBytes().isEmpty()) {
-          printWriter.printf("%n%s;%s",
-              fb.getAllocatedBytes().get(0),
-              fb.getAllocatedBytes().get(fb.getAllocatedBytes().size()-1));
-        }
-      }
-    }
-    printWriter.printf("%nFragmentation:%n");
-    printWriter.printf(fragmentation);
-    if (interpreter.getAllErrors().isEmpty()) {
-      printWriter.printf("%nErrors%nNone%n");
-      printWriter.printf("%n");
-    } else {
-      printWriter.printf("%nErrors");
-      for (Error e : interpreter.getAllErrors()) {
-        printWriter.printf("%n%s;%s;%s",
-            e.getCommandIdentifier(),
-            e.getInstructionNumber(),
-            e.getThirdParameter());
-      }
-      printWriter.printf("%n%n");
-    }
+    printWriter.printf(String.valueOf(cylinderMovements));
+    printWriter.printf("%n");
+    printWriter.printf(sb);
     printWriter.close();
   }
 
 }
 
-   */
+

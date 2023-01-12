@@ -41,6 +41,10 @@ public class Memory {
     allCyllinders.add(num);
   }
 
+  public void addToRequestedCylinders(int num) {
+    requestedCyllinderVisits.add(num);
+  }
+
   public int getStartingCyllinder() {
     for (Command c : allCommands) {
       if (c.isStartingPointCommand()) {
