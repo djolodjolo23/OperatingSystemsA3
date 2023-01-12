@@ -17,6 +17,13 @@ public class Memory {
     allCommands = new ArrayList<>();
   }
 
+  public void clearAllLists() {
+    allCyllinders.clear();
+    allCommands.clear();
+    requestedCyllinderVisits.clear();
+  }
+
+
   public void addToAllCommands(Command command) {
     allCommands.add(command);
   }

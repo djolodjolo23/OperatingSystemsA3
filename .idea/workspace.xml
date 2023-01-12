@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac2ffe3e-f237-4e01-b40b-b67bc67af73d" name="Changes" comment="update.">
+    <list default="true" id="ac2ffe3e-f237-4e01-b40b-b67bc67af73d" name="Changes" comment="Fcfs working fine.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Comparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/RegistryReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RegistryReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/Fcfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/Fcfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/Scan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/Scan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/StrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/StrategyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/strategy/SuperScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/SuperScan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673452591456</updated>
       <workItem from="1673452593153" duration="1106000" />
-      <workItem from="1673512858858" duration="11438000" />
+      <workItem from="1673512858858" duration="13979000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1673452616902</created>
@@ -90,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673522490473</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fcfs working fine.">
+      <created>1673525141550</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673525141550</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +120,18 @@
     <MESSAGE value="Initial commit." />
     <MESSAGE value="More classes created." />
     <MESSAGE value="update." />
-    <option name="LAST_COMMIT_MESSAGE" value="update." />
+    <MESSAGE value="Fcfs working fine." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fcfs working fine." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/strategy/SuperScan.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

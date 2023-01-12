@@ -13,7 +13,7 @@ public class StrategyFactory implements AbstractStrategyFactory{
 
   @Override
   public void getScanAllocationRule(RegistryReader registryReader, Memory memory) throws IOException {
-
+    new Scan(memory, registryReader);
   }
 
   @Override

@@ -16,6 +16,6 @@ public class Controller {
   public void run(AbstractStrategyFactory abstractStrategyFactory, Memory memory) throws IOException {
     registryReader.loadFile();
     abstractStrategyFactory.getFcfsAllocationRule(registryReader, memory);
+    abstractStrategyFactory.getScanAllocationRule(registryReader, memory);
   }
-
 }
