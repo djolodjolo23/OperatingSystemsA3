@@ -1,3 +1,5 @@
+package model;
+
 public enum AllocationType {
 
   FCFS('F'), SCAN('S'), CSCAN('C');

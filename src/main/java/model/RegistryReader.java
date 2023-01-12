@@ -1,23 +1,25 @@
+package model;
+
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
+import model.AllocationType;
+import model.Command;
 
 public class RegistryReader implements IntegerChecker {
 
-  private final ArrayList<Command> allCommands;
 
-  public RegistryReader() {
-    allCommands = new ArrayList<>();
+  private Memory memory;
+
+  public RegistryReader(Memory memory) {
+    this.memory = memory;
   }
 
-  public ArrayList<Command> getAllCommands() {
-    return allCommands;
-  }
 
   private String getInputPath() {
     Path path = Paths.get("Scenario1.in.txt");
@@ -37,12 +39,20 @@ public class RegistryReader implements IntegerChecker {
     while (scanner.hasNextLine()) {
       String[] line = scanner.nextLine().split(";");
       if (integerCheck(line[0])) {
-        var command = new Command(Integer.parseInt(line[0]), this);
-        allCommands.add(command);
+        var command = new Command(Integer.parseInt(line[0]), memory);
+        memory.addToAllCommands(command);
       } else {
         var command = new Command(String.valueOf(line[0]));
-        allCommands.add(command);
+        memory.addToAllCommands(command);
       }
+    }
+  }
+}
+
+  /*
+  public void saveFinalFile(Memory memory, char fitType) throws IOException {
+    try (PrintWriter pw = new PrintWriter(new FileWriter(getOutputPath().toString(), true))) {
+      printAndFormat(pw, memory, fitType);
     }
   }
 
@@ -94,3 +104,5 @@ public class RegistryReader implements IntegerChecker {
   }
 
 }
+
+   */
