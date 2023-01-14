@@ -8,8 +8,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
-import model.AllocationType;
-import model.Command;
 
 public class RegistryReader implements IntegerChecker {
 
@@ -22,16 +20,16 @@ public class RegistryReader implements IntegerChecker {
 
 
   private String getInputPath() {
-    Path path = Paths.get("Scenario1.in.txt");
+    Path path = Paths.get("Scenario1.in");
     return path.toAbsolutePath().toString();
   }
 
   private Path getInputPathShort() {
-    return Paths.get("Scenario1.in.txt");
+    return Paths.get("Scenario1.in");
   }
 
   private Path getOutputPath() {
-    return Paths.get("Scenario1.out.txt");
+    return Paths.get("Scenario1.out");
   }
 
   public void loadFile() throws IOException {

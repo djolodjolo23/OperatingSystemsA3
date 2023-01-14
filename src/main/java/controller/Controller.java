@@ -17,5 +17,6 @@ public class Controller {
     registryReader.loadFile();
     abstractStrategyFactory.getFcfsAllocationRule(registryReader, memory);
     abstractStrategyFactory.getScanAllocationRule(registryReader, memory);
+    abstractStrategyFactory.getCScanAllocationRule(registryReader, memory);
   }
 }

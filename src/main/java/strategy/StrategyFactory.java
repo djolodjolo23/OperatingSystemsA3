@@ -18,6 +18,7 @@ public class StrategyFactory implements AbstractStrategyFactory{
 
   @Override
   public void getCScanAllocationRule(RegistryReader registryReader, Memory memory) throws IOException {
+    new Cscan(memory, registryReader);
 
   }
 }

@@ -108,7 +108,33 @@ public abstract class SuperScan {
         registryReader.saveFinalFile(sum, listString, 'S');
       }
       case ('C') -> {
-
+        int sum = 0;
+        int startingPos = memory.getStartingCyllinder();
+        int direction = memory.getDirectionCyllinder();
+        StringBuilder sb = new StringBuilder();
+        ArrayList<Integer> requestedCylinders = memory.getRequestedCyllinderVisits();
+        if (!requestedCylinders.contains(199)) {
+          requestedCylinders.add(199);
+        }
+        if (!requestedCylinders.contains(0)) {
+          requestedCylinders.add(0);
+        }
+        ArrayList<Integer> numsLowerThanStartingPos = new ArrayList<>();
+        ArrayList<Integer> numsBiggerThanStartingPos = new ArrayList<>();
+        for (int i = 0; i < memory.getRequestedCyllinderVisits().size(); i++) {
+          int nextNum = memory.getRequestedCyllinderVisits().get(i);
+          sb.append(nextNum);
+          sb.append(",");
+          int result;
+          if (nextNum > startingPos) {
+            numsBiggerThanStartingPos.add(nextNum);
+          } else {
+            numsLowerThanStartingPos.add(nextNum);
+          }
+        }
+        Collections.sort(numsBiggerThanStartingPos);
+        Collections.sort(numsLowerThanStartingPos);
+        ArrayList<Integer> finalSortedList = new ArrayList<>();
       }
     }
     memory.clearAllLists();
