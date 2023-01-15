@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac2ffe3e-f237-4e01-b40b-b67bc67af73d" name="Changes" comment="Scan implemented.">
+    <list default="true" id="ac2ffe3e-f237-4e01-b40b-b67bc67af73d" name="Changes" comment="Cscan added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/RegistryReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RegistryReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/Cscan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/Cscan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/Fcfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/Fcfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategy/Scan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/Scan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/strategy/SuperScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategy/SuperScan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +69,8 @@
       <updated>1673452591456</updated>
       <workItem from="1673452593153" duration="1106000" />
       <workItem from="1673512858858" duration="14779000" />
-      <workItem from="1673540059940" duration="4765000" />
+      <workItem from="1673540059940" duration="5823000" />
+      <workItem from="1673793325451" duration="3569000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1673452616902</created>
@@ -110,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673541831069</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cscan added.">
+      <created>1673704965536</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704965536</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +145,18 @@
     <MESSAGE value="Fcfs working fine." />
     <MESSAGE value="Working on Scan algorithm." />
     <MESSAGE value="Scan implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Scan implemented." />
+    <MESSAGE value="Cscan added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cscan added." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/strategy/SuperScan.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

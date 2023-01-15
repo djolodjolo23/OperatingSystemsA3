@@ -98,9 +98,15 @@ public abstract class SuperScan {
         if (direction == 1) {
           for (int i = numsLowerThanStartingPos.size()-1; i >= 0; i--) {
             finalSortedList.add(numsLowerThanStartingPos.get(i));
+            int next = numsLowerThanStartingPos.get(i);
+            sum += startingPos - next;
+            startingPos = next;
           }
           for (Integer i : numsBiggerThanStartingPos) {
             finalSortedList.add(i);
+            int next = i;
+            sum += next - startingPos;
+            startingPos = next;
           }
         }
         String listString = finalSortedList.stream().map(Object::toString)
@@ -135,10 +141,52 @@ public abstract class SuperScan {
         Collections.sort(numsBiggerThanStartingPos);
         Collections.sort(numsLowerThanStartingPos);
         ArrayList<Integer> finalSortedList = new ArrayList<>();
+        if (direction == 0) {
+          for (Integer i : numsBiggerThanStartingPos) {
+            finalSortedList.add(i);
+            int next = i;
+            sum += next - startingPos;
+            startingPos = next;
+          }
+          sum += startingPos - numsLowerThanStartingPos.get(0);
+          if (numsLowerThanStartingPos.size() == 1) {
+            break;
+          }
+          for (int i = 0; i < numsLowerThanStartingPos.size(); i++) {
+            finalSortedList.add(numsLowerThanStartingPos.get(i));
+            if (i + 1 == numsLowerThanStartingPos.size()) {
+              break;
+            }
+            int next = numsLowerThanStartingPos.get(i+1);
+            sum += next - startingPos;
+            startingPos = next;
+          }
+        }
+        if (direction == 1) {
+          for (int i = numsLowerThanStartingPos.size()-1; i >= 0; i--) {
+            finalSortedList.add(numsLowerThanStartingPos.get(i));
+            int next = numsLowerThanStartingPos.get(i);
+            sum += startingPos - next;
+            startingPos = next;
+          }
+          sum += numsBiggerThanStartingPos.get(numsBiggerThanStartingPos.size() -1) - startingPos;
+          for (int i = numsBiggerThanStartingPos.size()-1; i >= 0; i--) {
+            finalSortedList.add(numsBiggerThanStartingPos.get(i));
+            startingPos = numsBiggerThanStartingPos.get(i);
+            if (i == 0) {
+              break;
+            }
+            int next = numsBiggerThanStartingPos.get(i - 1);
+            sum += startingPos - next;
+            //startingPos = next;
+          }
+        }
+        String listString = finalSortedList.stream().map(Object::toString)
+            .collect(Collectors.joining(","));
+        registryReader.saveFinalFile(sum, listString, 'C');
       }
     }
     memory.clearAllLists();
-
   }
 
 }

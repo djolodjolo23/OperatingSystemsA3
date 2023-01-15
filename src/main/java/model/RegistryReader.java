@@ -62,7 +62,7 @@ public class RegistryReader implements IntegerChecker {
       printWriter.printf("%nSCAN%n");
     }
     if (allocationType == AllocationType.CSCAN.getValue()) {
-      printWriter.printf("C-SCAN%n");
+      printWriter.printf("%nC-SCAN%n");
     }
     printWriter.printf(String.valueOf(cylinderMovements));
     printWriter.printf("%n");
